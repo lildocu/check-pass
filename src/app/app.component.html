@@ -1,0 +1,34 @@
+<h1 class="head">
+  {{title}}
+</h1>
+<div class="content">
+  <input type="password" [(ngModel)]="password" (input)="onInputChange()" class="content__input">
+
+  <ol class="content__strength">
+    <li
+      class="content__strength-item"
+      [class.--easy]="strength.easy"
+      [class.--medium]="strength.medium"
+      [class.--strong]="strength.strong"
+      [id]="strength.lessThenEight ? 'lessThenEight' : ''"
+    >
+      easy
+    </li>
+    <li
+      class="content__strength-item"
+      [class.--medium]="strength.medium"
+      [class.--strong]="strength.strong"
+      [id]="strength.lessThenEight ? 'lessThenEight' : ''"
+    >
+      medium
+    </li>
+    <li
+      class="content__strength-item"
+      [class.--strong]="strength.strong"
+      [id]="strength.lessThenEight ? 'lessThenEight' : ''"
+    >
+      strong
+    </li>
+  </ol>
+</div>
+<footer class="footer">Andriukhina Marharyta 2024</footer>
